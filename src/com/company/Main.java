@@ -9,7 +9,9 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        masyvas = new int[5];
+        System.out.println("Iveskite kiek norite skaiciu ivesti");
+        int a = sc.nextInt();
+        masyvas = new int[a];
         for (int i = 0; i < masyvas.length; i++) {
             System.out.println("Iveskite skaiciu");
             int skaicius = sc.nextInt();
@@ -18,10 +20,15 @@ public class Main {
         }
         atvaizdavimas();
     }
+
     public static void atvaizdavimas() {
-        System.out.println("skaiciu suma " +suma);
-        for (int i = 0; i <masyvas.length; i++) {
-            System.out.print(masyvas[i]);
+        System.out.println("skaiciu suma " + suma);
+        for (int i = 0; i < masyvas.length; i++) {
+            if (masyvas[i] <= 100) {
+                System.out.print(masyvas[i]);
+            } else {
+                System.out.println("skaicius turi buti mazesnis uz 100");
+            }
 
         }
     }
